@@ -1,2 +1,2 @@
-# locnguyen91
-Portfolio of Loc Nguyen
+# locnguyen91.github.io
+Profile

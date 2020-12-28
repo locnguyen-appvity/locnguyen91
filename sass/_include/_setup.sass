@@ -1,0 +1,130 @@
+/*Font Face*/
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700&subset=latin,vietnamese')
+/// Transform
+
+=transition($properties)
+	-webkit-transition: $properties
+	-moz-transition: $properties
+	-ms-transition: $properties
+	-o-transition: $properties
+	transition: $properties
+
+/*Colors*/
+$main: #e23c29
+$red: #00aeef
+$link: #1152a7
+$base: #333333
+$white: #ffffff
+$black: #000000
+$brown: #666666
+$white-brown: #999999
+
+/*General*/
+*
+	box-sizing: inherit
+
+=fs($size)
+	font-size: ($size/16)
+body
+	font-family: 'Muli', sans-serif
+	+fs(15rem)
+	margin: 0 auto
+	color: $base
+	min-height: 100%
+	height: 100%
+
+a
+	transition: all 0.3s
+a, a:hover
+	&:focus, &:active, &:hover
+		text-decoration: none
+		outline: none
+img
+	max-width: 100%
+.fullpage
+	overflow-x: hidden
+.height100vh
+	height: 100vh
+.height100
+	height: 100%
+
+.flex-center 
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+figure:after
+	content: ""
+	display: table
+	clear: both
+.container
+	max-width: 1276px
+	margin: 0 auto
+	background: $white
+	position: relative
+	z-index: 9
+.row
+	margin-left: -15px
+	margin-right: -15px
+	display: flex
+	flex-wrap: wrap
+.h-grid-6,.h-grid-12,.h-grid-md-3,.h-grid-md-5,.h-grid-md-6,.h-grid-md-7,.h-grid-md-9
+	transition: all 0.3s
+	position: static
+	padding-left: 15px
+	padding-right: 15px
+.h-grid-12
+	width: 100%
+	@media only screen and (max-width: 575.98px)
+		flex: 0 0 100%
+		max-width: 100%
+.h-grid-6
+	flex: 0 0 50%
+	max-width: 50%
+	box-sizing: border-box
+@media only screen and (min-width: 992px)
+	.h-grid-md-3
+		flex: 0 0 21%
+		max-width: 21%
+	.h-grid-md-4
+		flex: 0 0 33.33333%
+		max-width: 33.33333%
+	.h-grid-md-5
+		flex: 0 0 37%
+		max-width: 37%
+	.h-grid-md-6
+		flex: 0 0 50%
+		max-width: 50%
+	.h-grid-md-7
+		flex: 0 0 54%
+		max-width: 54%
+	.h-grid-md-9
+		flex: 0 0 70%
+		max-width: 70%
+.relative
+	position: relative
+.text-right
+	text-align: right
+.h-padding
+	padding: 4.375rem 5.25rem 1.6625rem
+	&.h-brand
+		@media only screen and (min-width: 992px)
+			display: block
+			width: 83%
+			margin-top: -8rem
+.hidden
+	display: none
+// Extra small devices (portrait phones, less than 576px)
+// @media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }

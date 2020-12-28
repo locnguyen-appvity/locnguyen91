@@ -1,0 +1,349 @@
+.h-preloader
+	&.js-enabled
+		display: flex
+	display: block
+	justify-content: center
+	align-items: center
+	text-align: center
+	height: 100%
+.js-enabled
+	.js-main-container
+		display: none
+// Source: http://stephanwagner.me/only-css-loading-spinner
+
+.c-preloader__spinner
+	min-width: 70px
+	min-height: 70px	
+
+.c-preloader__spinner:before
+	content: 'Loading…'
+	position: absolute
+	top: 50%
+	left: 50%
+	width: 70px
+	height: 70px
+	margin-top: -35px
+	margin-left: -35px
+
+@keyframes c-preloader__spinner
+	to {transform: rotate(360deg)}
+
+
+@-webkit-keyframes c-preloader__spinner
+	to {-webkit-transform: rotate(360deg)}
+
+.c-preloader__spinner:not(:required):before
+	content: ''
+	border-radius: 50%
+	border: 4px solid transparent
+	animation: c-preloader__spinner .8s ease infinite
+	-webkit-animation: c-preloader__spinner .8s ease infinite
+
+.h-preloader__spinner:not(:required):before
+	border-top-color: $red
+	border-bottom-color: $red
+
+.h-background
+	background: darken($white, 3%)
+	@media only screen and (min-width: 992px)
+		&:before
+			content: ''
+			background: darken($white, 3%)
+			position: absolute
+			left: 0
+			top: 0
+			width: 50%
+			height: 100%
+			z-index: 1
+		&:after
+			content: ''
+			background: $white
+			position: absolute
+			right: 0
+			top: 0
+			width: 50%
+			height: 100%
+			z-index: 1
+main
+	.h-background
+		position: relative
+		background: darken($white, 5%)
+		.container
+			background: darken($white, 3%)
+		.h-grid-md-3
+			background: darken($white, 5%)
+			@media only screen and (max-width: 991px)
+				background: darken($white, 10%)
+		@media only screen and (min-width: 992px)
+			&:before
+				content: ''
+				background: darken($white, 5%)
+				position: absolute
+				left: 0
+				top: 0
+				width: 50%
+				height: 100%
+				z-index: 1
+			&:after
+				content: ''
+				background: darken($white, 3%)
+				position: absolute
+				right: 0
+				top: 0
+				width: 50%
+				height: 100%
+				z-index: 1
+		&:nth-child(even)
+			background: darken($white, 4%)
+			.container
+				background: darken($white, 2%)
+			.h-grid-md-3
+				background: darken($white, 10%)
+			@media only screen and (min-width: 992px)
+				&:before
+					content: ''
+					background: darken($white, 10%)
+					position: absolute
+					left: 0
+					top: 0
+					width: 50%
+					height: 100%
+					z-index: 1
+				&:after
+					content: ''
+					background: darken($white, 2%)
+					position: absolute
+					right: 0
+					top: 0
+					width: 50%
+					height: 100%
+header
+	.height100vh
+		@media only screen and (max-width: 991px)
+			height: auto
+	.h-grid-md-3.height100vh
+		@media only screen and (max-width: 991px)
+			height: auto
+		@media only screen and (min-width: 992px)
+			background: darken($white, 4%)
+.h-avatar
+	@media only screen and (max-width: 991px)
+		padding: 30px 0
+	@media only screen and (min-width: 992px)
+		margin-top: -5rem
+	img
+		border-radius: 50%
+		width: 270px
+		height: 270px
+		object-fit: cover
+		@media only screen and (min-width: 768px)
+			width: 200px
+			height: 200px
+		@media only screen and (min-width: 1280px)
+			width: 270px
+			height: 270px
+.h-brand
+	@media only screen and (max-width: 991px)
+		padding: 15px
+	h1
+		+fs(70rem)
+		color: $red
+		text-transform: uppercase
+		margin: 0 0 10px
+		.first-word
+			text-transform: capitalize
+			color: darken($white, 35%)
+			font-weight: 300
+			display: block
+	h2
+		+fs(27rem)
+		color: darken($white, 30%)
+		word-spacing: 2px
+		margin: 0 0 10px
+		font-weight: 400
+.h-contact
+	width: 100%
+	padding-top: 20px
+	padding-bottom: 20px
+	border-top: 2px solid darken($white, 5%)
+	@media only screen and (min-width: 992px)
+		position: absolute
+		bottom: 0
+		left: 6.25rem
+		width: 82%
+	h4
+		color: darken($white, 60%)
+		font-weight: 600
+		margin: 0 0 7px
+		+fs(16rem)
+	a
+		text-decoration: none
+		color: darken($white, 40%)
+		&[href^="tel:"]
+			cursor: text
+		&:hover
+			color: $red
+.h-media-item
+	position: relative
+	margin: 0 0 30px
+	padding-left: 35px
+	.number
+		position: absolute
+		top: 1px
+		left: 0
+		color: $white
+		font-weight: 700
+		+fs(14rem)
+		background: $red
+		width: 25px
+		height: 25px
+		line-height: 25px
+		text-align: center
+		-webkit-animation-name: phone-ring
+		animation-name: phone-ring
+		-webkit-animation-duration: 2s
+		animation-duration: 2s
+		-webkit-animation-iteration-count: infinite
+		animation-iteration-count: infinite
+	.h-media-content
+		h3
+			font-weight: 700
+			margin: 0 0 10px
+			text-transform: uppercase
+			color: $brown
+.h-percent
+	.h-percent-item
+		margin-bottom: 40px
+		@media only screen and (max-width: 992px)
+			margin-bottom: 20px
+	.percent
+		display: block
+		+fs(18rem)
+		text-transform: uppercase
+		color: $brown
+		margin: 0 0 10px
+		strong,small
+			color: $red
+		small
+			margin-right: 5px
+	.c-progress-bar
+		display: block
+		position: relative
+		background: darken($white,7%)
+		height: 5px
+	.h-progress_filler
+		transition: width 1.4s ease-in-out .5s
+		background: $red
+		height: 100%
+		width: 0
+.h-experience
+	position: relative
+	border-left: 3px solid darken($white,7%)
+	padding-left: 25px
+	.h-experience-item
+		position: relative
+		margin-bottom: 30px
+		.h-experience-bgcycle
+			height: 10px
+			width: 10px
+			position: absolute
+			left: -31px
+			top: 3px
+			border-radius: 50%
+			background: $red
+			box-shadow: 0 0 0 6px $white
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: -3px
+				left: -3px
+				background: $red
+				opacity: 0.5
+				border-radius: 50px
+				height: 15px
+				width: 15px
+				transform: scale3d(1.3, 1.3, 1.3)
+				-webkit-animation-name: hotline-animate
+				animation-name: hotline-animate
+				-webkit-animation-duration: 1s
+				animation-duration: 1s
+				-webkit-animation-iteration-count: infinite
+				animation-iteration-count: infinite
+		small
+			opacity: .6
+			+fs(11rem)
+			display: block
+			margin: 0 0 5px
+		h3
+			margin: 0 0 10px
+			text-transform: uppercase
+			color: $base
+			+fs(16rem)
+		h4
+			margin: 0 0 10px
+			color: $brown
+			+fs(14rem)
+@keyframes phone-ring 
+	0% 
+		transform: rotate(0deg) scale(1) skew(1deg) 
+	5% 
+		transform: rotate(-25deg) scale(1) skew(1deg) 
+	10% 
+		transform: rotate(25deg) scale(1) skew(1deg) 
+	15% 
+		transform: rotate(-25deg) scale(1) skew(1deg) 
+	20% 
+		transform: rotate(25deg) scale(1) skew(1deg) 
+	25% 
+		transform: rotate(0deg) scale(1) skew(1deg) 
+	100% 
+		transform: rotate(0deg) scale(1) skew(1deg)
+@keyframes hotline-animate 
+	0% 
+		transform: scale3d(1.3, 1.3, 1.3)
+		opacity: 0.5 
+	100% 
+		transform: scale3d(2.2,2.2,2.2)
+		opacity: 0
+.h-project-item
+	margin: 0 0 30px
+	text-align: center
+	a
+		display: block
+		margin: 0 auto
+		text-decoration: none
+		&.hidden
+			display: none
+		figure
+			margin: 0
+			padding: 0
+			img
+				-webkit-filter: grayscale(100%)
+				filter: grayscale(100%)
+				transition: all 0.3s
+			h3
+				text-transform: uppercase
+				+fs(18rem)
+				color: $black
+				display: block
+				margin: 15px 0 0
+				transition: all 0.3s
+		&:hover
+			figure
+				img
+					-webkit-filter: grayscale(0)
+					filter: grayscale(0)
+				h3
+					letter-spacing: 2px
+					color: $red
+.h-grid-12
+	flex: auto
+.mrb-xs-15
+	@media only screen and (max-width: 991px)
+		margin-bottom: 15px
+.h-padding
+	@media only screen and (max-width: 991px)
+		padding: 15px
+	@media only screen and (min-width: 992px) and (max-width: 1280px)
+		padding: 30px

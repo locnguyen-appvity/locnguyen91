@@ -1,0 +1,10 @@
+{
+    "name": "Compile-Sass",
+    "version": "1.0.0",
+    "devDependencies": {
+        "gulp": "^3.9.0",
+        "gulp-sass": "latest",
+        "gulp-sourcemaps": "latest",
+        "gulp-watch": "latest"
+    }
+}

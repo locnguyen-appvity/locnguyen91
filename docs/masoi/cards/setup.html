@@ -1,0 +1,39 @@
+<div class="swiper-slide card_setup" >
+	<div class="slider_inside_container">
+		<img class="wolf_img" src="res/wolf.png">
+		<span class="num_player_hint">请选择游戏的人数</span>
+		<div class="select_setup">
+			<select id="num_god" onchange="init_roles();" class="god_s">
+				<option value="3">3 神</option>
+				<option value="4">4 神</option>
+			</select>
+		</div>
+		<div class="select_setup">
+		<select id="num_wolf" onchange="init_roles();" class="wolf_s">
+			<option value="3">3 狼</option>
+			<option value="4">4 狼</option>
+		</select>
+		</div>
+		<div class="select_setup">
+			<select id="num_people" onchange="init_roles();" class="people_s">
+				<option value="3">3 民</option>
+				<option value="4">4 民</option>
+			</select>
+		</div>
+		<button id="intro_button" class="intro_butt game_butt">选择角色</button>
+	</div>
+</div>
+
+<div class="swiper-slide card_setup" >
+	<div class="slider_inside_container">
+		<img class="wolf_img" src="res/wolf.png">
+		<span class="num_player_hint">请选择角色</span>
+		<div>
+			<div class="role_div"><img src="res/witch.png" width="64px" height="64px"> <p style="font-size: 0.8em"><strong>女巫(必选)</strong></p></div>
+			<div class="role_div"> <img src="res/hunter.png" width="64px" height="64px">  <p style="font-size: 0.8em"><strong>猎人(必选)</strong></p></div>
+			<div class="role_div"> <img src="res/prophet.png" width="64px" height="64px"> <p style="font-size: 0.8em"><strong>预言家(必选)</strong></p> </div>
+			<div class="role_div" id="cupid_div" onclick="role_select(this)"> <img src="res/cupid.png" width="64px" height="64px"><p style="font-size: 0.8em"><strong>丘比特(可选)</strong></p> </div>
+		</div>
+		<button class="intro_butt" id="game_start">开始游戏</button>
+	</div>
+</div>

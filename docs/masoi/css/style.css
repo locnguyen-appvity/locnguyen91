@@ -1,0 +1,340 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+.ms-container {
+    margin:auto;
+}
+.slider_inside_container{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    height: 100%;
+    overflow-y: scroll;
+}
+.wolf_img{
+    display: inline;
+    margin-top: 20px;
+}
+.num_player_hint{
+    display: inherit;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.selectivity-input {
+    width: 240px !important;
+}
+.intro_butt{
+    display: inherit;
+    margin:auto;
+    margin-top: 15px;
+    margin-bottom: 80px;
+}
+
+/*
+ * button
+ */
+ /* vars and mixins */
+/* vary the squish amount */
+.square-side {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 120px solid transparent;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+}
+.trapezoid-side {
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-radius: .2em;
+  top: -10px;
+}
+/* styles */
+body {
+  background: lightgray;
+}
+button {
+  font-size: 1.3em;
+  color: white;
+  display: block;
+  margin: 2em auto;
+  height: 46px;
+  background: cornflowerblue;
+  border: none;
+  position: relative;
+  width: 240px;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  box-shadow: 0 0 .25em #333;
+  cursor: pointer;
+  outline: none;
+  /* mashed state */
+}
+button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 120px solid transparent;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  border-left-color: cornflowerblue;
+}
+button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 120px solid transparent;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  border-right-color: cornflowerblue;
+}
+button:active {
+  -webkit-transform: scale(1.2, 0.8);
+}
+button:active::before {
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-radius: .2em;
+  top: -10px;
+  border-left-color: cornflowerblue;
+}
+button:active::after {
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-radius: .2em;
+  top: -10px;
+  border-right-color: cornflowerblue;
+}
+/* end button */
+
+.select_setup {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.role_div {
+  border-radius: 50%;
+  display: inline-block !important;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 130px;
+  height: 130px;
+}
+
+.theme_div_wide{
+  border-radius: 50%;
+  display: inline-block !important;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 180px;
+  height: 180px;  
+}
+
+.theme_div_short{
+  border-radius: 50%;
+  display: inline-block !important;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 120;
+  height: 120;  
+}
+
+.role_div:hover {
+  background-color: cornflowerblue;
+  transition-property: background;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+
+#cupid_div: focus{
+  background-color: cornflowerblue;
+}
+
+.wolf {
+  position: relative !important;
+}
+
+.wolf_slide {
+  margin-top: 3% !important;
+}
+
+/*Select Box*/
+
+select {
+  margin: 2px;
+  border: 1px solid #111;
+  background: transparent;
+  width: 240px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 50px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select[multiple]:focus option:checked {
+  background: cornflowerblue !important;
+}
+
+.wolf_s {
+  background: url(../res/wolf.png) 96% / 15% no-repeat #eee;
+}
+
+
+.god_s {
+  background: url(../res/witch.png) 96% / 15% no-repeat #eee;
+}
+
+.people_s {
+  background: url(../res/people.png) 96% / 15% no-repeat #eee; 
+}
+
+.prophet_s {
+  background: url(../res/prophet.png) 96% / 15% no-repeat #eee; 
+}
+
+.witch_s {
+  background: url(../res/witch.png) 96% / 15% no-repeat #eee; 
+}
+
+.hunter_s {
+  background: url(../res/hunter.png) 96% / 15% no-repeat #eee; 
+}
+
+/* CAUTION: IE hackery ahead */
+
+
+select::-ms-expand { 
+    display: none; /* remove default arrow in IE 10 and 11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    select {
+        background:none\9;
+        padding: 5px\9;
+    }
+}
+
+
+/*
+ * The circular div for the player status
+ */
+
+.circleBase {
+    border-radius: 50% !important;
+}
+
+.circle_div {
+    width: 80 !important;
+    height: 80 !important;
+    background: cornflowerblue;
+    color: white;
+    font-size: 0.9em;
+    border: 0;
+    position: absolute !important;
+    top: 5px;
+    left: 5px;
+    z-index: 99999;
+    text-align: center;
+    line-height: 80px;
+}
+
+#game_status::before{
+  height: 0 !important;
+  border:0 !important;
+}
+
+#game_status::after{
+  height: 0 !important;
+  border:0 !important;
+}
+
+/*The CSS for the popup*/
+.black_overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+.white_content {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  width: auto;
+  height: 50%;
+  padding: 16px;
+  border: 0;
+  background-color: white;
+  z-index: 1002;
+  overflow: auto;
+  text-align: center;
+}
+#wolf_count, #god_count, #people_count {
+  font-size: 1.5em;
+  line-height: 64px;
+}
+
+.status_img {
+  float:left;
+  margin-left:20%;
+  clear: left;
+}
+
+.status_txt {
+  float:right;
+  margin-right: 20%;
+  clear: right;
+}
+
+.status_butt {
+  clear: both;
+  margin-top:20px;
+}
